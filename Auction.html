@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .square {
+        height: 50px;
+        width: 50px;
+        position: fixed;
+        top: 300px;
+        height: 300px;
+        left: 200px;
+        width: 500px;
+      }
+
+      .square1 {
+        height: 50px;
+        width: 50px;
+        position: fixed;
+        top: 300px;
+        height: 300px;
+        right: 200px;
+        width: 500px;
+      }
+
+      .button4 {
+        border-radius: 12px;
+      }
+
+      .button {
+        position: absolute;
+        background-color: #fff8dc;
+        top: 120px;
+        left: 100px;
+        width: 300px;
+        /* Green */
+        border: 2px solid #73ad21;
+        color: black;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 30px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      .button2 {
+        border-radius: 12px;
+      }
+
+      .button1 {
+        position: absolute;
+        background-color: #6495ed;
+        top: 120px;
+        left: 100px;
+        width: 300px;
+        /* Green */
+        border: 2px solid #73ad21;
+        color: black;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 30px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+    </style>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#header").load("header.php");
+      });
+    </script>
+  </head>
+
+  <body style="background-image: url(auc_bg.jpg);">
+    <!-- <div id="header"></div> -->
+    <div id="header"></div>
+
+    <div class="square">
+      <button class="button button4" onclick="JumpToAddAuction()">
+        Add product for Auction
+      </button>
+    </div>
+
+    <div class="square1">
+      <button class="button1 button2" onclick="JumpToViewAuction()">
+        Product available for Auction
+      </button>
+    </div>
+
+    <script>
+      function JumpToAddAuction() {
+        window.location.href = "AddAuction.php";
+      }
+
+      function JumpToViewAuction() {
+        window.location.href = "auctionall.php";
+      }
+    </script>
+  </body>
+</html>
